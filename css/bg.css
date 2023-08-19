@@ -1,0 +1,13 @@
+.bg{
+				top: 0;
+				right: 0;
+				left: 0;
+				bottom: 0;
+				z-index: -2;
+				position: fixed;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-position: 70% 70%;
+				background-image: url(../img/bg.jpg);
+}

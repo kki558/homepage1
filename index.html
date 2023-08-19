@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+				<meta charset="UTF-8">
+				<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+				<title>kki558的窝</title>
+				<style>
+				</style>
+				<link rel="stylesheet" href="css/bg.css">
+				<link rel="stylesheet" href="css/a.css">
+				<link rel="stylesheet" href="APlayer/APlayer.min.css">
+</head>
+<body style="
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+">
+				<div class="bg"></div>
+				<div style="
+				padding: 20px;
+				
+				">
+								<img src="http://q1.qlogo.cn/g?b=qq&nk=2193515723&s=640"  width="80px" height="80px">
+				</div>
+				<div style="
+				text-align: center;
+				line-hight: 1.7;
+				">
+								<h3 style="
+												margin: 0px;
+												padding: 0px;
+								">kki558的窝</h3>
+								<p>我的第一个网站~<br>做了很久啦</p>
+				</div>
+				<div>
+								<a class="a" href="http://kki558-blog.gotp.ml">我的博客</a>
+								<a class="a" href="https://www.bilibili.com">bilibili</a>
+								<a class="a" href="https://www.github.com/kki558">GitHub</a>
+				</div>
+				<!--音乐播放器-->
+
+<div id="aplayer"></div>
+
+<script src="APlayer/APlayer.min.js"></script>
+<script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        fixed: true,                //是否附着页面底部，否为false
+        autoplay: false,             //是否自动播放，否为false,移动端不能生效
+        volume: 0.4,                //初始音量（0~1）
+        lrcType: 3,                 //歌词模式（1、HTML模式 2、js模式 3、lrc文件模式）
+        mutex: true,                //互斥模式：阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+        order: 'random',            //音频循环顺序（'list'：顺序, 'random'：随机）
+        preload: 'auto',            //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
+        listFolded: true,          //列表默认折叠，开启为true
+        theme: '#FFB6C1',           //主题颜色
+        audio: [{
+            name: 'Collapsing World',           //歌曲名称
+            artist: 'Lightscape',       //歌曲作者
+            url: 'https://music.163.com/song/media/outer/url?id=38018486',         //歌曲源文件地址
+            cover: 'https://p2.music.126.net/b-zvY5gJZ2zZ-F7WcH1cbg==/109951167955465270.jpg?param=512y512',     //歌曲封面地址
+            lrc:  null,        //歌曲的歌词文件
+            theme: '#eeeeee'        //主题颜色（优先）
+        },{
+            name: '小城夏天',
+            artist: 'LBI利比',
+            url: 'https://music.163.com/song/media/outer/url?id=1934251776',
+            cover: 'http://p1.music.126.net/wYuFxK1i_5jqs58xXQ-Jfg==/109951167350445378.jpg?param=512y512',
+            lrc: null,
+            theme: '#eeeeee'
+        }]
+    });
+</script>
+
+<script type="text/javascript">
+
+  var images = ['bg.jpg','bg1.jpg'];
+  var sj = Math.round( Math.random() * 1);
+  document.getElementsByClassName('bg')[0].style.backgroundImage = "url(img/" + images[Math.round( Math.random() * 1)] + ")";
+
+</script>
+
+</body>
+<footer style="
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				text-align: center;
+">
+				<p>Copyright 2023 kki558.</p>
+				
+</footer>
+</html>
